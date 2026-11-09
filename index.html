@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://muath-wedding.pages.dev/ladies/ -->
+<html lang="ar" dir="rtl" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة زفاف خالد ورغد — السيدات</title>
+<meta name="description" content="تتشرف السيدة فاطمة محمد الحربي بدعوتكنّ لحفل زفاف ابنها">
+<meta name="theme-color" content="#E7E7EA">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="دعوة زفاف ">
+<meta property="og:title" content="دعوة خاصة — حفل زفاف خالد ورغد">
+<meta property="og:description" content="تتشرف السيدة فاطمة محمد الحربي بدعوتكنّ لحفل زفاف ابنها">
+<meta property="og:locale" content="ar_SA">
+<meta property="og:url" content="">
+<meta property="og:image" content="https://muath-wedding.pages.dev/assets/og-ladies.jpg?v=7">
+<meta property="og:image:secure_url" content="https://muath-wedding.pages.dev/assets/og-ladies.jpg?v=7">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="بطاقة دعوة لؤلؤية على أرضية خزامية عليها ختم بنفسجي وزهرة خزامى">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="دعوة خاصة — حفل زفاف خالد ورغد">
+<meta name="twitter:description" content="تتشرف السيدة فاطمة محمد الحربي بدعوتكنّ لحفل زفاف ابنها">
+<meta name="twitter:image" content="https://muath-wedding.pages.dev/assets/og-ladies.jpg?v=7">
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Gulzar&family=Tajawal:wght@300;400;500;700&display=swap">
+<style>
+/* ==========================================================================
+   دعوة السيدات — a separate invitation, purple and silver.
+   Self-contained: it shares the RSVP endpoint with the main invitation and
+   nothing else, because it is Arabic-only, has its own palette and its own
+   sections. Keeping it apart is cheaper than parameterising the other page.
+   ========================================================================== */
+
+:root {
+  /* البنفسجي — the client's khuzama purple, with a deep step dark enough for
+     body text on pearl and a pale step for ornament. */
+  --purple-deep:  #3B2160;
+  --purple:       #6B3FA0;
+  --purple-mid:   #7A4FA8;
+  --purple-light: #A585C9;
+  --purple-pale:  #E9DFF5;
+
+  /* الفضي — the ground */
+  /* Every text colour that sits directly on the ground is checked against the
+     DARKEST silver, not the lightest — the gradient ends there. */
+  --silver-0: #F2EEF9;
+  --silver-1: #E6DEF4;
+  --silver-2: #DCD2F0;
+  --silver-3: #D6C9EA;
+
+  --pearl:      #FCFBFD;
+  --pearl-edge: #EFEAF6;
+  /* الزخرفة — «بخط ذهبي أو فضي» — silver, by the client's choice:
+     pearl white would vanish against the pearl card, and the earlier lilac-grey
+     was neither of the two metals the brief names. */
+  --ornament:      #9A9AA8;
+  --ornament-soft: rgba(126, 126, 142, .50);
+  --ornament-hair: rgba(126, 126, 142, .26);
+
+  --ink:       #2B2733;
+  --ink-soft:  #4A4358;
+  --ink-faint: #6E6680;
+
+  --rule:      rgba(107, 63, 160, .30);
+  --rule-soft: rgba(107, 63, 160, .15);
+
+  /* فارسي (نستعليق) for the names and the section titles. The basmala and the
+     verse stay in Amiri: Qur'anic text is set in Naskh, not Nastaliq. */
+  --ff-nastaliq: 'Gulzar', 'Noto Nastaliq Urdu', serif;
+  --ff-display: 'Aref Ruqaa', 'Amiri', serif;
+  --ff-head:    'Amiri', 'Aref Ruqaa', serif;
+  --ff-ui:      'Tajawal', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+
+  --fs-display: clamp(1.6rem, 6.5vw, 2.6rem);
+  --fs-h2:      clamp(1.35rem, 5vw, 1.9rem);
+  --fs-h3:      clamp(1.1rem, 4vw, 1.35rem);
+  --fs-body:    clamp(1rem, 2.8vw, 1.0625rem);
+  --fs-small:   clamp(.8125rem, 2.3vw, .9375rem);
+
+  --shell:   min(100% - 2rem, 46rem);
+  --pad:     clamp(2.75rem, 9vw, 5rem);
+  --radius:  clamp(.75rem, 2.5vw, 1.25rem);
+
+  --lift:    0 1px 2px rgba(59, 33, 96, .05), 0 10px 30px rgba(59, 33, 96, .08);
+  --lift-lg: 0 2px 6px rgba(59, 33, 96, .07), 0 24px 60px rgba(59, 33, 96, .13);
+
+  --ease:     cubic-bezier(.22, .61, .36, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 2rem;
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  min-block-size: 100svh;
+  font-family: var(--ff-ui);
+  font-size: var(--fs-body);
+  line-height: 1.9;
+  color: var(--ink);
+  background:
+    radial-gradient(120% 80% at 50% 0%, var(--silver-0), transparent 60%),
+    linear-gradient(170deg, var(--silver-1) 0%, var(--silver-2) 55%, var(--silver-3) 100%);
+  background-attachment: fixed;
+}
+
+/* A whisper of texture over the silver, so the ground is not a flat wash. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: .5;
+  background-image:
+    repeating-linear-gradient(115deg, rgba(255,255,255,.5) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(65deg, rgba(107,63,160,.04) 0 1px, transparent 1px 4px);
+}
+
+/* «استخدم الرمز في الخلفية» — the sprig tiled behind everything, very faint so
+   it reads as watermark rather than pattern. Fixed, so it does not scroll. */
+.bg-motif {
+  position: fixed;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  z-index: 0;
+  pointer-events: none;
+  color: var(--purple);
+  opacity: .07;
+}
+
+main { position: relative; z-index: 1; }
+
+.shell { inline-size: var(--shell); margin-inline: auto; }
+
+h1, h2, h3, p, figure, blockquote { margin: 0; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+a { color: inherit; }
+img, svg { display: block; max-inline-size: 100%; }
+
+:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 4px; }
+
+/* The symbol sprite. It must be out of flow, and the CSP forbids a style
+   attribute, so it is a class. */
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.nowrap { white-space: nowrap; }
+
+.sr-only {
+  position: absolute; inline-size: 1px; block-size: 1px;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+
+/* ---- reveal --------------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity .9s var(--ease-out), transform .9s var(--ease-out);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---- section furniture ---------------------------------------------------- */
+
+.section { padding-block: var(--pad); }
+.section + .section { padding-block-start: 0; }
+
+.section-title {
+  font-family: var(--ff-nastaliq);
+  font-weight: 400;
+  line-height: 2.2;
+  padding-block: .1em .3em;
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  color: var(--purple-deep);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.lede {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: var(--fs-small);
+  max-inline-size: 44ch;
+  margin: .5rem auto 0;
+}
+
+/* a divider: hairline, lozenge, hairline */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  inline-size: min(100%, 18rem);
+  margin: .9rem auto 1.75rem;
+  color: var(--purple-light);
+}
+.divider::before, .divider::after {
+  content: '';
+  flex: 1;
+  block-size: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule), transparent);
+}
+.divider__mark {
+  flex: none;
+  /* 420:594 — the artwork is 1:1.414, taller than it is wide */
+  inline-size: clamp(24px, 6.2vw, 32px);
+  block-size: clamp(34px, 8.8vw, 45px);
+  color: var(--purple-light);
+}
+
+.card {
+  background: var(--pearl);
+  border: 1px solid var(--pearl-edge);
+  border-radius: var(--radius);
+  box-shadow: var(--lift);
+  padding: clamp(1.25rem, 4.5vw, 2rem);
+}
+
+/* ---- the invitation card -------------------------------------------------- */
+
+/* Top padding has to clear the half of the seal that hangs above the card,
+   or it collides with the top of the viewport. */
+/* The top space here used to clear a seal that hung over the card's edge.
+   With the seal gone it is ordinary breathing room. */
+.invite { padding-block: clamp(2rem, 6vh, 3.5rem) var(--pad); }
+
+.invite__card {
+  position: relative;
+  background: var(--pearl);
+  border-radius: var(--radius);
+  box-shadow: var(--lift-lg);
+  padding: clamp(2.25rem, 8vw, 3.25rem) clamp(1.25rem, 6vw, 3rem) clamp(2rem, 7vw, 3rem);
+  text-align: center;
+  /* Still NOT overflow:hidden — the corner cartouches and the edge lozenges
+     sit on the border itself and would be sliced in half. */
+}
+/* the double engraved frame */
+.invite__card::before, .invite__card::after {
+  content: '';
+  position: absolute;
+  inset: clamp(.6rem, 2.2vw, 1rem);
+  border: 1px solid var(--ornament-soft);
+  border-radius: calc(var(--radius) - .25rem);
+  pointer-events: none;
+}
+.invite__card::after { inset: clamp(.95rem, 2.9vw, 1.4rem); border-color: var(--ornament-hair); }
+
+/* زخرفة نباتية على حدود البطاقة — the floral corner the brief asks for, the
+   same motif the main invitation uses, drawn here in silver. */
+.frame__corner {
+  position: absolute;
+  inline-size: clamp(26px, 7vw, 46px);
+  block-size: clamp(26px, 7vw, 46px);
+  color: var(--ornament);
+  opacity: .85;
+  pointer-events: none;
+  z-index: 1;
+}
+/* placed physically — a frame is symmetric, so it needs no mirroring for RTL */
+.frame__corner--tl { top: clamp(.6rem, 2.2vw, 1rem);    left: clamp(.6rem, 2.2vw, 1rem); }
+.frame__corner--tr { top: clamp(.6rem, 2.2vw, 1rem);    right: clamp(.6rem, 2.2vw, 1rem); transform: scaleX(-1); }
+.frame__corner--bl { bottom: clamp(.6rem, 2.2vw, 1rem); left: clamp(.6rem, 2.2vw, 1rem);  transform: scaleY(-1); }
+.frame__corner--br { bottom: clamp(.6rem, 2.2vw, 1rem); right: clamp(.6rem, 2.2vw, 1rem); transform: scale(-1); }
+
+.frame__edge {
+  position: absolute;
+  background: var(--pearl);   /* break the rule the motif sits on */
+  padding: 2px;
+  inline-size: clamp(13px, 3.4vw, 20px);
+  block-size: clamp(13px, 3.4vw, 20px);
+  color: var(--ornament);
+  opacity: .8;
+  pointer-events: none;
+  z-index: 1;
+}
+/* Physical placement — a frame is symmetric, so it needs no RTL mirroring.
+   The offset is the frame's own inset and the motif is then pulled back by half
+   its OWN size with translate, so it sits centred on the rule. A percentage in
+   `left` would have resolved against the card's width instead, which threw the
+   first attempt ~170px outside the card. */
+.frame__edge--start  { left: clamp(.6rem, 2.2vw, 1rem);   top: 50%;  translate: -50% -50%; }
+.frame__edge--end    { right: clamp(.6rem, 2.2vw, 1rem);  top: 50%;  translate: 50% -50%; }
+.frame__edge--bottom { bottom: clamp(.6rem, 2.2vw, 1rem); left: 50%; translate: -50% 50%; }
+
+.invite__basmala {
+  font-family: var(--ff-head);
+  font-size: clamp(1.05rem, 4vw, 1.3rem);
+  color: var(--purple);
+  line-height: 2;
+  margin-block-end: .75rem;
+}
+
+.invite__verse {
+  font-family: var(--ff-head);
+  font-size: clamp(.95rem, 3.4vw, 1.125rem);
+  line-height: 2.3;
+  color: var(--ink-soft);
+  max-inline-size: 40ch;
+  margin-inline: auto;
+}
+.invite__verse-ref {
+  display: block;
+  font-family: var(--ff-ui);
+  font-size: var(--fs-small);
+  font-style: normal;
+  color: var(--ink-faint);
+  margin-block-start: .4rem;
+}
+
+.invite__lead { color: var(--ink-soft); font-size: var(--fs-small); }
+
+.invite__host {
+  font-family: var(--ff-nastaliq);
+  line-height: 2.2;
+  padding-block: .1em .3em;
+  font-size: clamp(1.2rem, 4.6vw, 1.6rem);
+  font-weight: 700;
+  color: var(--purple-deep);
+  line-height: 1.9;
+}
+
+.invite__names {
+  font-family: var(--ff-nastaliq);
+  font-size: clamp(1.3rem, 5.6vw, 2.1rem);
+  font-weight: 700;
+  line-height: 2.1;
+  color: var(--purple);
+  padding-block: .2em .35em;
+}
+
+.invite__bride {
+  font-family: var(--ff-nastaliq);
+  line-height: 2.2;
+  padding-block: .1em .3em;
+  font-size: clamp(1.1rem, 4.4vw, 1.5rem);
+  font-weight: 700;
+  color: var(--purple-deep);
+  line-height: 1.9;
+}
+
+/* ---- the two dates -------------------------------------------------------- */
+
+.dates {
+  display: grid;
+  /* 13rem, not 11: below that the Hijri value broke across lines */
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: clamp(.75rem, 3vw, 1.25rem);
+}
+.date-card { text-align: center; }
+.date-card__label {
+  font-size: var(--fs-small);
+  color: var(--ink-faint);
+  letter-spacing: .06em;
+}
+.date-card__day {
+  font-family: var(--ff-head);
+  font-size: var(--fs-h3);
+  color: var(--purple);
+  margin-block-start: .35rem;
+}
+.date-card__value {
+  font-family: var(--ff-head);
+  font-size: clamp(1.35rem, 5.2vw, 1.85rem);
+  font-weight: 700;
+  color: var(--purple-deep);
+  line-height: 1.7;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- countdown ------------------------------------------------------------ */
+
+.count {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(.4rem, 2vw, .85rem);
+  max-inline-size: 34rem;
+  margin-inline: auto;
+}
+.count__cell {
+  /* «أرقام بخط بنفسجي غامق على خلفية فضية» — silver, not pearl */
+  background: linear-gradient(160deg, var(--silver-0), var(--silver-2));
+  border: 1px solid var(--pearl-edge);
+  border-radius: var(--radius);
+  box-shadow: var(--lift);
+  padding: clamp(.6rem, 2.6vw, 1rem) .25rem;
+  text-align: center;
+}
+.count__num {
+  display: block;
+  font-family: var(--ff-head);
+  font-size: clamp(1.5rem, 7vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--purple-deep);
+  font-variant-numeric: tabular-nums;
+}
+/* the seconds cell ticks; a short fade keeps it from feeling mechanical */
+.count__num.is-tick { animation: tick .5s var(--ease-out); }
+@keyframes tick { from { opacity: .35; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .count__num.is-tick { animation: none; } }
+
+.count__label {
+  display: block;
+  font-size: clamp(.6875rem, 2.2vw, .8125rem);
+  color: var(--ink-faint);
+  margin-block-start: .15rem;
+}
+.count__today {
+  text-align: center;
+  font-family: var(--ff-head);
+  font-size: var(--fs-h2);
+  color: var(--purple);
+}
+
+/* ---- venue ---------------------------------------------------------------- */
+
+.venue { text-align: center; }
+.venue__name {
+  font-family: var(--ff-head);
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
+  font-weight: 700;
+  color: var(--purple-deep);
+  line-height: 1.8;
+}
+.venue__address { color: var(--ink-soft); font-size: var(--fs-small); margin-block-start: .3rem; }
+
+/* ---- buttons -------------------------------------------------------------- */
+
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; margin-block-start: 1.5rem; }
+
+.btn {
+  font: inherit;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  min-block-size: 3rem;
+  padding-inline: 1.5rem;
+  border-radius: calc(var(--radius) - .25rem);
+  border: 1px solid var(--purple);
+  background: var(--purple);
+  color: #FFF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--ease) .2s, transform var(--ease) .2s;
+}
+.btn:hover { background: var(--purple-mid); transform: translateY(-1px); }
+.btn:active { transform: none; }
+
+/* ---- the personal-invitation note ----------------------------------------- */
+
+.notice {
+  display: flex;
+  gap: .6rem;
+  align-items: flex-start;
+  max-inline-size: 34rem;
+  margin: 0 auto 1.5rem;
+  padding: .85rem 1rem;
+  border: 1px solid var(--rule);
+  border-radius: calc(var(--radius) - .25rem);
+  background: var(--purple-pale);
+  color: var(--purple-deep);
+  font-size: var(--fs-small);
+  line-height: 1.8;
+}
+.notice__mark { flex: none; inline-size: 1.1rem; block-size: 1.1rem; margin-block-start: .35rem; rotate: 45deg; border: 1px solid currentColor; }
+.frame__edge use, .divider__mark use { pointer-events: none; }
+
+/* ---- the two house notes ---------------------------------------------------
+   Marks rather than sentences, at the couple's request. They close the
+   personal-invitation block, so a guest reads: the invitation is hers, come
+   early, here are the timings, and these two things please. */
+
+.rules {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1.5rem, 9vw, 3.25rem);
+  margin-block-start: clamp(1.75rem, 6vw, 2.5rem);
+  list-style: none;
+}
+.rules__item {
+  display: grid;
+  justify-items: center;
+  gap: .55rem;
+  max-inline-size: 13ch;
+}
+.rules__icon {
+  inline-size: clamp(44px, 13vw, 58px);
+  block-size: clamp(44px, 13vw, 58px);
+  color: var(--purple);
+}
+.rules__label {
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  line-height: 1.75;
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* ---- schedule ------------------------------------------------------------- */
+
+.timeline { max-inline-size: 34rem; margin-inline: auto; display: grid; gap: 0; }
+/* Stacked by default. «١٢:٠٠ منتصف الليل» is far too long for a fixed time
+   column on a phone — it overlapped the event name — so the two columns only
+   appear once there is room for the longest label. */
+.timeline__item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: .1rem;
+  align-items: baseline;
+  padding-block: 1rem;
+  position: relative;
+  padding-inline-start: 1.5rem;
+}
+@media (min-width: 28rem) {
+  .timeline__item { grid-template-columns: 11rem 1fr; gap: 1rem; }
+}
+/* the rail, and a node per stop */
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block: 0;
+  inline-size: 1px;
+  background: var(--rule);
+}
+.timeline__item:first-child::before { inset-block-start: 50%; }
+.timeline__item:last-child::before  { inset-block-end: 50%; }
+.timeline__item::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: -4px;
+  inset-block-start: calc(50% - 4.5px);
+  inline-size: 9px;
+  block-size: 9px;
+  rotate: 45deg;
+  background: var(--purple);
+}
+.timeline__time {
+  font-family: var(--ff-head);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--purple);
+  font-variant-numeric: tabular-nums;
+}
+.timeline__what { color: var(--ink); }
+
+/* ---- footer --------------------------------------------------------------- */
+
+.footer__closing {
+  font-family: var(--ff-head);
+  font-size: var(--fs-h3);
+  color: var(--purple);
+  line-height: 2;
+  max-inline-size: 34ch;
+  margin-inline: auto;
+}
+.footer {
+  text-align: center;
+  padding-block: var(--pad) clamp(2rem, 6vw, 3rem);
+  transform: translateY(-90px);
+}
+/* ---- بوابة الظرف — the envelope gate --------------------------------------
+   The ladies' answer to the men's doors. A sealed envelope fills the screen;
+   the seal breaks, the flap folds away from the guest, and the card is drawn
+   up out of the pocket before the whole gate fades.
+
+   Nothing here is load-bearing: the gate ships `hidden` and is only revealed
+   by ladies.js, so a scripting failure leaves the invitation plainly open. */
+
+html.is-sealed { overflow: hidden; }
+
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 5vw, 2rem);
+  background:
+    radial-gradient(120% 90% at 50% 18%, var(--silver-0), var(--silver-2) 58%, var(--silver-3));
+  opacity: 1;
+  transition: opacity 900ms var(--ease);
+}
+.gate.is-open { opacity: 0; pointer-events: none; }
+
+.gate__stage {
+  display: grid;
+  justify-items: center;
+  gap: clamp(1.25rem, 5vw, 2rem);
+}
+
+/* 420:290 is the envelope's own drawing box. The whole gate is sized off this
+   one ratio, so the flap tip, the seam and the seal all stay in register at
+   every width. */
+.gate__envelope {
+  position: relative;
+  inline-size: min(84vw, 27rem);
+  aspect-ratio: 420 / 290;
+  perspective: 1100px;
+  filter: drop-shadow(0 26px 44px rgba(59, 33, 96, .26));
+}
+
+.env { position: absolute; inset: 0; transform-style: preserve-3d; }
+
+.env__face,
+.env__flap { position: absolute; inline-size: 100%; display: block; }
+.env__face { inset: 0; z-index: 2; }
+
+/* Hinged on its top edge, folding backwards. It fades over the last third of
+   the fold: once it is past upright it would otherwise be racing the rising
+   card for depth order, and 3D sorting across engines is not worth trusting
+   for the one moment the invitation is judged on. */
+.env__flap {
+  inset-block-start: 0;
+  block-size: calc(100% * 168 / 290);
+  transform-origin: 50% 0;
+  backface-visibility: hidden;
+  z-index: 3;
+  transition: transform 900ms cubic-bezier(.62, .02, .3, 1) 220ms,
+              opacity 340ms linear 780ms;
+}
+.gate.is-opening .env__flap { transform: rotateX(-168deg); opacity: 0; }
+
+.env__seam {
+  fill: none;
+  stroke: var(--ornament-hair);
+  stroke-width: 1.4;
+}
+
+/* Behind the face, so its lower half stays tucked in the pocket the whole way
+   up — that overlap is what reads as a card being drawn out. */
+.env__card {
+  position: absolute;
+  inset-inline: 7%;
+  inset-block-start: 6%;
+  block-size: 84%;
+  z-index: 1;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: .55rem;
+  padding: 1rem;
+  border-radius: calc(var(--radius) * .7);
+  background: var(--pearl);
+  border: 1px solid var(--pearl-edge);
+  box-shadow: 0 -6px 18px rgba(59, 33, 96, .10);
+  transition: transform 820ms var(--ease-out) 950ms;
+}
+.gate.is-opening .env__card { transform: translateY(-62%); }
+
+.env__card-rule {
+  inline-size: clamp(2.5rem, 14vw, 4.5rem);
+  block-size: 1px;
+  background: linear-gradient(90deg, transparent, var(--ornament-soft), transparent);
+}
+.env__card-mark {
+  inline-size: clamp(18px, 5vw, 24px);
+  block-size: clamp(25px, 7.1vw, 34px);   /* 420:594 — 1:1.414 */
+  color: var(--purple);
+  opacity: .6;
+}
+
+/* Sits on the flap's tip: 166/290 of the envelope's height. `left`, not
+   `inset-inline-start` — the seal is centred, so it is one of the few things
+   on this page that must NOT mirror. On an RTL page the logical property
+   resolves to `right: 50%` and the translate still pulls physically left,
+   putting the seal a quarter of the envelope off centre. */
+.gate__seal {
+  position: absolute;
+  left: 50%;
+  inset-block-start: calc(100% * 166 / 290);
+  translate: -50% -50%;
+  z-index: 4;
+  /* Bigger than it was. The seal now carries two real emblems rather than
+     one and a placeholder, and the crown stops reading as a crown below
+     about 34px — which is what it measured at the old size. */
+  inline-size: clamp(4.75rem, 25vw, 6.5rem);
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  filter: drop-shadow(0 10px 18px rgba(43, 20, 78, .45));
+  transition: transform 420ms var(--ease), opacity 420ms var(--ease);
+}
+.gate__seal svg { inline-size: 100%; block-size: 100%; display: block; }
+.gate__seal:focus-visible { outline: 2px solid var(--purple-deep); outline-offset: 6px; }
+.gate.is-opening .gate__seal {
+  transform: translateY(10px) scale(.82) rotate(-14deg);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gate__title {
+  font-family: var(--ff-nastaliq);   /* same words, same face, as the men's */
+  font-size: clamp(1.4rem, 5.8vw, 2.2rem);
+  font-weight: 400;
+  color: var(--purple-deep);
+  line-height: 2.1;
+  padding-block: .06em .26em;
+  position: relative;
+  padding-inline: clamp(2.5rem, 12vw, 4.5rem);
+  transition: opacity 300ms var(--ease);
+}
+.gate__title::before,
+.gate__title::after {
+  content: '';
+  position: absolute;
+  inset-block-start: 50%;
+  inline-size: clamp(1.75rem, 9vw, 3.25rem);
+  block-size: 1px;
+}
+.gate__title::before { inset-inline-start: 0;  background: linear-gradient(90deg, transparent, var(--ornament)); }
+.gate__title::after  { inset-inline-end: 0;    background: linear-gradient(270deg, transparent, var(--ornament)); }
+
+.gate__cta {
+  font-family: var(--ff-ui);
+  font-size: var(--fs-small);
+  color: var(--ink-faint);
+  animation: gate-breathe 2.6s ease-in-out infinite;
+  transition: opacity 300ms var(--ease);
+}
+@keyframes gate-breathe { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+
+.gate.is-opening .gate__title,
+.gate.is-opening .gate__cta { opacity: 0; animation: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .env__flap, .env__card, .gate__seal { transition: none; }
+  .gate.is-opening .env__flap { transform: none; opacity: 0; }
+  .gate.is-opening .env__card { transform: none; }
+  .gate.is-opening .gate__seal { transform: none; opacity: 0; }
+  .gate__cta { animation: none; opacity: .8; }
+}
+
+</style>
+
+
+</head><body style=""><svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <lineargradient id="sealFace" x1="30%" y1="20%" x2="75%" y2="90%">
+      <stop offset="0%" stop-color="#8E63BE"></stop>
+      <stop offset="45%" stop-color="#6B3FA0"></stop>
+      <stop offset="100%" stop-color="#3B2160"></stop>
+    </lineargradient>
+  </defs>
+    <symbol id="i-lavender" viewBox="0 0 420 594">
+      <!-- زهرة الخزامى — the family's own artwork, used verbatim. One path,
+           fill-rule="evenodd"; the source's second path was a white two-sliver
+           cleanup that is unnecessary once the flower takes currentColor.
+           The box is 420x594, so anything sizing it must keep 1:1.414 or the
+           drawing squashes. -->
+      <path fill="currentColor" fill-rule="evenodd" d="M114.15 193.29C114.26 190.88 114.37 188.47 114.47 186.06C114.47 184.39 114.48 182.71 114.48 181.04C114.37 178.75 114.26 176.46 114.15 174.17C114.14 170.73 111.99 162.19 116.09 160.29C120.58 161.84 121.42 175.68 122.05 179.95C124.6 197.28 120.4 212.83 119.03 230.07C118.66 234.81 118.32 246.09 122.44 249.4C125.88 247.22 129.12 238.98 131.68 235.42C140.22 223.51 149.04 212.03 159.14 201.32C160.7 199.66 163.21 198.6 164.97 197.12C167.07 195.34 168.88 193.09 171.02 191.31C172.58 190.02 176.09 188.1 176.86 186.2C178.03 183.3 174.81 181.57 174.5 178.99C174.27 177.05 175.04 175.37 175.07 173.52C175.08 172.22 174.23 171.14 174.09 169.87C173.75 166.88 174.52 163.61 175.25 160.75C168.91 154.86 165.84 167.22 162.57 169.84C160.03 169.12 159.77 168.13 158.21 166.26C157.35 165.24 156 164.89 155.34 163.64C153.85 160.79 154.9 157.88 154.42 154.9C154.23 153.77 153.39 152.71 153.01 151.63C153.8 150.24 155.79 149.54 155.35 147.62C154.86 145.47 145.02 145.88 143.36 147.24C142.17 148.21 142.29 150.53 141.6 151.86C134.86 154.6 135.83 150.73 132.37 149.22C131.16 148.69 129.82 149.4 128.66 148.84C126.01 147.58 122.44 141.98 121.99 139.14C121.73 137.55 122.77 136.35 122.51 134.76C120.61 133.16 114.59 133.28 112.5 134.6C111.18 135.44 111.03 137.27 109.22 137.41C106.65 137.59 104.55 134.32 103.22 132.48C106.86 128.51 104.71 128.05 105.5 123.44C105.74 122.06 106.98 121.16 107.05 119.7C107.16 117.32 106.51 115.38 107.31 112.98C108.42 109.64 113.45 108.43 116.49 110.36C117.92 111.26 117.74 113.29 118.71 114.56C120.06 116.33 123.56 118.47 125.64 119.19C127.56 118.27 131.25 116.22 132.68 114.65C133.74 113.49 133.13 111.76 134.03 110.56C135.94 108.04 141.95 106.32 144.79 107.17C146.67 110.32 145.02 114.81 146.01 118.31C147.1 122.19 151.28 125.77 153.45 129.1C154.52 128.23 155.58 127.36 156.64 126.49C157.71 127.54 158.77 128.59 159.84 129.64C161.93 128.35 161.74 125.41 163.68 123.78C165.01 122.67 171.83 120.3 173.52 120.27C175.44 120.24 176.42 121.66 178.19 122.05C179.81 122.4 181.46 122.13 183.05 122.72C184.52 123.27 185.88 124.65 185.39 126.42C185.14 127.36 184 127.75 183.46 128.5C181.04 131.85 180.5 134.8 180.99 138.86C181.14 140.17 180.98 142.26 182.31 143.06C185.75 145.11 188.56 140.14 190.59 138.38C193.22 136.1 200.45 134.26 204.07 134.09C205.61 134.02 207.91 134.16 209.34 134.76C210.61 135.3 210.73 136.97 211.93 137.6C213.43 138.39 215.2 137.66 216.76 138.25C221.48 140.06 222.89 144.1 228.18 139.48C229.58 138.26 230.71 137.57 231.18 135.67C229.3 132.75 220.24 129.8 221.59 125.18C223.29 124.07 224.09 125.42 225.5 126.43C228.1 123.53 224.38 122.8 223.46 120.6C222.91 119.25 223.58 117.6 222.66 116.38C221.52 114.88 219.17 114.83 218.49 112.86C215.92 105.48 220.87 106.05 224.11 102.12C225.26 100.72 227.19 97.81 229.01 97.39C231.83 96.74 232.98 98.78 235.14 99.81C237.16 100.76 239.9 99.73 241.7 101.01C244.2 102.79 242.1 107.23 242.27 109.67C242.37 111.11 243.07 112.12 243.35 113.44C243.89 115.92 239.57 121.78 244.66 121.99C249.39 115.15 254.13 108.31 258.86 101.47C257.83 99.42 256.26 99.75 254.62 98.56C252.58 97.07 251.49 94.56 250.53 92.35C253.67 84.14 246.83 84.15 246.05 79.24C244.82 71.45 249.42 74.64 251.9 71.09C252.9 69.66 252.26 67.89 253.32 66.43C259.63 64.72 258.76 67.46 262.47 68.85C265.96 70.17 273.63 70.17 276.58 67.7C276.52 65.77 275.11 65.86 274.3 64.33C273.67 63.15 273.77 61.72 272.98 60.6C270.69 57.36 267.04 55.01 264.65 51.76C265.01 48.31 267.15 48.28 269.86 47.11C271.68 46.33 272.57 44.46 274.76 44.31C278.23 44.08 280.81 46.38 285.01 43.99C289.35 41.52 282.23 33.26 284.61 29.94C287.5 25.91 294.42 30.26 295.49 33.52C293.63 34.95 291.92 35.27 293.45 37.95C297.89 37.25 299.02 28.15 305.12 32.61C305.34 34.67 305.55 36.73 305.77 38.8C304.71 39.88 303.54 39.63 302.3 40.34C301.12 41.02 296.39 47.19 295.91 48.57C303.15 55.63 306.6 58.16 304.56 69.09C304.21 70.97 304.62 72.56 303.49 74.18C298.68 74.38 288.6 67.73 284.33 73.1C285.19 74.19 286.05 75.29 286.9 76.38C286.05 76.95 285.19 77.52 284.33 78.08C283.84 77.06 283.34 76.04 282.84 75.02C278.8 74.26 277.65 80.42 276.2 83.09C275.2 84.93 270.74 88.6 275.21 89.84C276.01 89.37 276.68 88.4 277.56 88.1C278.96 87.62 280.55 88.47 281.86 87.81C282.9 87.28 283.4 85.56 284.33 84.79C286.13 84.81 291.23 87.26 292.26 88.77C292.98 89.82 292.61 91.23 293.22 92.34C293.91 93.59 295.17 94.25 295.83 95.54C294.99 97.69 295.24 99.26 295.63 101.47C294.82 102.36 293.54 102.87 292.87 103.85C291.62 105.68 292.86 108.73 289.8 108.96C286.9 109.18 286.51 107.28 284.24 106.37C281.36 105.21 278.23 106.18 275.34 104.74C273.17 103.65 269.57 102.06 268.03 104.66C269.69 106.63 271.35 108.61 273.01 110.59C270.75 114.9 264.86 105.27 262.35 105.11C260.91 106.94 259.47 108.76 258.03 110.59C258.72 112.81 263.39 115.27 265.51 116.51C266.37 119.56 266.62 123.51 265.76 126.55C267.16 128.43 269.73 129.91 269.86 132.49C270.04 136.02 267.46 136.07 265.58 138.12C264.43 139.36 265.22 141.07 264.37 142.39C262.25 145.68 258.3 142.01 256.47 140.68C255.42 141.25 254.37 141.82 253.32 142.4C250.86 141.32 248.36 139.06 245.61 139.32C245.75 140.43 245.89 141.55 246.03 142.66C247.69 143.37 249.36 144.08 251.02 144.79C245.77 151.17 238.52 138.81 234.29 139.72C231.86 140.24 230.28 143.52 228.85 145.16C225.48 149.01 221.89 151.66 220.07 156.53C219.32 158.55 216.31 160.25 219.12 162.4C219.88 160.89 220.64 159.39 221.4 157.88C229.04 161.97 217.11 170.34 215.39 173.52C219.83 176.92 224.26 180.31 228.7 183.71C229.61 182.29 230.53 180.87 231.44 179.45C228.75 174.12 225.06 176.18 229.48 168.6C230 167.7 230.23 166.32 231.3 165.86C232.75 165.22 234.32 166.37 235.76 165.3C238.45 163.3 240.51 159 244.65 160.02C247.66 160.77 247.35 163.86 249.29 165.48C251.39 167.23 257.41 165.58 257.08 170.31C256.82 174.09 251.78 173.84 250.59 176.68C251.99 178.69 254.5 179.14 253.61 182.17C252.57 185.76 246.5 189.6 249.67 193.51C252.7 194.25 254.04 191.22 256.51 190.13C260.22 195.76 245.47 199.78 246.83 204.87C247.73 208.24 251.79 210.79 253.68 213.52C254.39 214.55 254.53 215.91 255.25 216.96C256.71 219.07 258.83 220.82 260.27 222.88C264.28 228.67 267.35 235.48 270.7 241.65C273.7 247.17 277.17 252.56 279.32 258.56C280.97 263.14 283.36 267.48 284.97 272.04C286.32 275.85 287.21 282.05 290.72 284.56C292.52 283.78 296.53 275.63 298.23 273.38C311.46 255.97 313.82 238.01 311.32 216.39C310.98 213.38 309.39 211.06 308.63 208.2C308.17 206.46 308.29 204.53 307.64 202.83C307.01 201.17 305.8 200.08 305.38 198.23C304.93 196.23 304.2 192.72 305.91 191.3C308 191.41 310.43 194.9 311.62 196.64C315.53 202.35 319.21 207.98 320.25 215C322.55 230.51 321.07 247.36 312.75 260.98C308.44 268.04 302.91 274.26 297.76 280.65C295.76 283.13 292.61 286 292.12 289.24C291.05 296.17 294.45 299.9 294.95 305.31C295.12 307.12 294.34 311.14 296.39 312.16C300.58 314.25 305.19 308.94 308.93 313.52C306.92 316.52 298.51 321.09 297.78 322.67C295.82 326.91 297.37 332.7 296.84 337.23C295.91 345.17 295.92 353.34 294.83 361.23C294.17 366.02 292.69 370.75 291.88 375.54C291.44 378.15 290.15 380.3 289.49 382.81C288.9 385.07 288.88 387.43 288.21 389.67C287.55 391.92 285.6 393.68 286.78 396.06C291.95 397.4 300.04 383.7 302.68 379.99C313.34 365.03 321.51 333.37 317.09 315.26C316.72 313.76 315.73 312.6 315.23 311.16C313.54 306.23 311.87 297.32 311.4 292.08C311.19 289.66 310.58 286.95 312.61 285.24C317.13 286.93 319.07 291.85 320.81 295.98C324.55 304.88 326.17 313 327.13 322.63C329.36 344.88 321.21 365.96 307.53 383.01C299.69 392.78 288.45 399.39 280.89 409.26C278.31 412.63 277.91 416.78 275.95 420.27C275.42 421.22 274.34 421.69 273.73 422.62C270.24 427.84 266.3 432.85 263.69 438.54C262.75 440.6 261.06 440.39 261.32 443.03C264.52 445.41 278.43 439.98 282.36 438.53C297.22 433.02 310.1 424.54 320.25 412.14C325.78 405.4 328.71 396.85 334.49 390.35C339.66 384.56 343.22 377.98 350.61 374.57C353.27 373.34 356.01 370.95 358.66 373.67C358.65 377.85 348.19 389.83 345.59 394.15C341.04 401.72 337.32 409.8 331.45 416.49C322.62 426.57 310.63 435.2 297.66 439.3C295.84 439.87 293.88 439.87 292.04 440.41C290.38 440.89 289.22 442.39 287.52 442.72C285.1 443.2 282.63 443.02 280.2 443.61C278.27 444.07 276.7 445.27 274.79 445.69C269.19 446.95 260.57 447.04 255.51 449.99C250.83 452.72 248.08 457.58 244.32 461.16C241.53 463.82 233.63 470.15 232.85 473.58C234.35 476.01 237.11 475.32 239.64 475.05C245.79 474.4 251.79 471.63 257.4 469.21C259.23 468.41 260.81 466.93 262.58 466.25C272.17 462.55 282.13 459.12 292.54 458.93C294.09 458.9 295.56 459.45 297.1 459.42C301.67 459.33 306.21 459.03 310.77 460.18C314.9 461.23 319.03 463.66 322.96 465.31C328.83 467.77 342.17 475.25 341.6 482.7C338.66 484.6 333.82 480.73 331.05 479.08C321.82 473.56 313.39 471.68 303.14 469.07C296.39 467.35 278.8 469.25 272.05 471.6C270.65 472.09 269.81 473.41 268.36 473.83C266.45 474.38 264.41 473.95 262.51 474.4C261.07 474.75 260.8 476.27 259.58 476.85C257.75 477.73 254.88 477.73 252.87 477.94C246.14 478.65 228.87 477.28 223.89 480.42C218.55 483.79 213.99 490.54 210.09 495.35C208.62 497.15 206.02 498.88 206.71 501.75C207.03 503.06 208.92 504.04 209.68 505.13C213.03 509.91 217.2 513.71 220.34 518.64C222.67 522.29 224.75 526.54 227.26 529.99C227.84 530.79 228.75 531.18 229.22 532.09C229.79 533.2 229.74 534.49 230.27 535.6C231.16 537.44 234.48 540.29 231.52 542.3C227.3 545.16 223.25 538.58 221.69 535.54C218.39 529.11 213.45 523.63 209.62 517.5C207.29 513.74 204.54 508.29 200.42 506.28C196.05 508.23 194.39 514.4 191.39 517.68C180.32 529.74 169.11 548.93 163.89 564.47C163.33 566.13 162.29 567.55 161.73 569.22C160.34 573.38 159.94 580.16 154.36 580.26C152.82 580.29 151.57 580.29 150.34 579.38C149.56 575.46 155.85 563.21 157.92 559.43C161.6 552.72 164.47 545.55 168.36 538.88C172.88 531.11 178.67 524.16 183.63 516.75C185.89 513.37 195.61 505 196 501.39C196.43 497.44 188.66 490.04 185.82 487.49C184.79 486.57 183.2 484.59 182.01 484.04C179.96 483.11 177.08 483.41 174.89 483.38C170.14 483.3 164.9 482.81 160.28 484.24C159.03 484.63 158.32 485.72 157.12 486.21C155.23 486.96 152.94 486.76 150.96 487.28C148.81 487.84 146.94 489.16 144.77 489.7C138.27 491.33 131.75 492.58 125.19 493.94C123.17 494.36 121.3 495.37 119.24 495.62C103.58 497.46 86.03 493.82 73.39 484.56C66.21 479.29 58.78 474.34 55.38 465.65C54.57 463.6 53.09 462.65 53.42 460.36C56.71 459.56 59.18 463.58 61.67 465.28C65.44 467.85 68.46 471.28 71.98 474.1C75.48 476.91 80.45 478.97 84.6 480.65C106.16 489.36 132.29 481.81 154.36 479.33C159.26 478.78 164.03 478.38 168.96 478.86C171.11 479.08 174.66 480.58 176.47 479.51C176.55 475.65 173.51 473.37 171.11 470.74C166.5 465.69 160.05 459.87 156.11 454.75C153.94 451.94 152.38 448.52 149.08 446.71C143.64 443.75 137.51 443.91 131.62 442.66C129.55 442.22 127.83 440.89 125.8 440.33C123.87 439.8 121.65 439.95 119.82 439.01C118.94 438.56 118.49 437.59 117.6 437.16C116.14 436.44 114.35 436.65 112.85 436.03C109.58 434.67 106.05 432.21 103.11 430.22C91.54 422.4 81.44 412.3 69.79 404.25C66.52 402 63.24 400.48 59.81 398.74C58.72 398.18 58.16 397.01 56.99 396.54C54.52 395.53 48.85 393.96 47.31 391.95C51.94 386.17 65.9 394.92 71.15 396.95C74.68 398.32 77.84 400.67 81 402.62C86.59 406.07 92.31 409.43 97.53 413.45C101.56 416.56 105.06 420.51 109.03 423.85C112.89 427.1 117.3 429.55 121.26 432.58C125.21 435.61 137.22 443.73 142.2 440.29C143.26 437.94 140.59 436.43 139.35 434.56C135.86 429.28 131.54 424.51 128.24 419.22C126.37 416.22 125.39 413.15 123.84 410.38C123.31 409.42 122.34 408.82 121.94 407.77C120.64 404.45 119.9 400.01 117.32 397.29C114.25 394.07 99.14 388.08 94.48 386.42C93.08 385.92 92.07 384.76 90.7 384.25C77.65 379.41 64.66 372.51 54.69 362.8C47.53 355.81 41.1 348.88 36.52 339.93C35.1 337.16 32.05 331.77 34.43 328.9C37.57 329.16 38.81 332.49 40.3 334.8C43.62 339.96 48.06 344.82 52.22 349.32C64.73 362.87 80.8 373.98 97.48 381.56C98.55 382.04 99.01 383.04 99.91 383.71C102.47 385.62 110.85 390.56 113.76 390.13C116.25 387.51 113.22 385.55 112.39 383.12C111.83 381.47 111.99 379.53 111.72 377.82C111.32 375.27 109.84 373.26 109.18 370.84C107.12 363.2 105.91 355.36 105.11 347.5C104.84 344.82 104.52 335.31 103.11 333.55C101.73 331.84 99.09 333.38 97.36 333.43C94.3 333.53 88.86 332.11 87.1 329.48C88.88 326.6 93.67 329.74 95.9 326.74C95.08 324.21 92.9 325.07 91.27 323.46C89.4 321.63 87.67 321.83 85.62 320.46C84.76 319.88 84.63 318.8 83.67 318.32C82.44 317.71 80.94 317.88 79.67 317.29C76.95 316.02 74.63 311.83 74.72 308.96C74.8 306.48 75.53 305.64 77.54 304.4C78.5 300.42 77.03 297.4 80.82 294.47C83.36 292.52 85.95 294.57 88.57 294.38C91.65 294.15 92.13 292.21 94.49 291.25C98.19 289.74 105.13 291.92 108.25 286.32C108.96 285.05 108.74 283.54 109.16 282.18C110.55 277.8 112.74 273.51 114.42 269.26C115.13 267.45 114.86 265.36 115.61 263.57C116.44 261.58 120.54 256.31 120.15 254.03C119.43 249.9 116.63 246.19 115.47 242.33C114.68 239.68 114.99 236.81 114.09 234.14C113.51 232.4 112.38 231.05 112.2 229.15C111.58 222.31 111.37 214.07 112.24 207.26C112.85 202.57 114.2 198.13 114.15 193.29ZM284.79 50.74C283.76 51.99 282.73 53.24 281.7 54.5C282.21 55.61 287.2 62.6 287.67 62.7C292.47 63.73 293.87 60.53 296.08 57.36C297.25 55.68 299.11 55.61 298.3 53.13C292.44 50.17 290.09 53.03 287.52 57.38C286.61 55.17 285.7 52.95 284.79 50.74ZM269.28 82.94C270.28 82.68 271.89 82.56 272.7 81.86C274.57 80.24 276.1 74.77 274.59 72.67C271.73 68.66 267.05 73.66 265.88 76.38C267.23 79.7 268.94 78.39 269.28 82.94ZM138.86 127.82C141.69 123.53 134.81 118.01 130.82 119.25C129.09 124.17 134.01 129.31 138.86 127.82ZM137.71 132.48C134.48 129.66 130.66 129.35 127.64 132.48C129.14 135.86 135.85 135.33 137.71 132.48ZM191.76 143.18C187.59 142.93 185.17 147.78 186.25 151.5C187.1 154.45 197.98 160.55 200.39 158.47C200.46 157.09 199.77 155.95 199.52 154.6C198.43 148.98 196.97 150.21 193.73 146.25C192.9 145.25 192.73 144.09 191.76 143.18ZM200.42 181.87C199.09 182.52 196.84 183.58 195.88 184.71C194.9 185.87 195.37 187.42 194.9 188.74C194.06 191.1 189.94 194.15 187.46 192.63C186.34 191.94 186.16 189.98 185.37 188.96C180.06 188.8 173.5 198.42 169.64 201.79C155.22 214.34 141.91 228.21 132.91 245.32C131.25 248.46 129.1 251.38 127.99 254.69C130.1 256.31 140.73 255.09 143.88 254.86C159.53 253.73 172.1 253.44 185.02 243.16C189.69 239.45 194.24 235.82 198.85 231.91C201.09 230 203.12 227.63 206.07 229.61C204.59 235.49 200.22 239.67 195.82 243.47C183.96 253.73 170.51 259.92 154.36 259.67C147.12 259.55 132.67 256.53 126.35 258.83C123.19 259.98 122.79 265.09 121.69 267.87C119.41 273.64 118.58 279.55 116.95 285.44C115.55 290.49 112.78 293.91 114.69 299.92C118.16 301.37 119.31 297.75 122.45 297.4C126.2 296.99 125.61 299.94 128.38 300.6C130.43 301.08 132.94 299.69 134.9 300.84C137.76 302.51 136.29 307.84 136.69 310.33C136.94 311.87 138.63 312.5 138.92 314.04C139.89 319.27 138.65 321.33 141.39 326.29C140.39 328.01 139.4 329.73 138.4 331.45C135.21 331.21 132.02 330.96 128.83 330.71C126.32 334.17 119.83 334.54 115.85 333.11C114.35 332.57 114.15 331.63 112.41 331.67C109.67 335.39 111.61 346.7 112.13 351.37C113.66 365.15 117.82 378.45 122.97 391.17C125.42 397.24 127.05 402.75 131.56 407.73C133.67 406.24 133.42 402.99 133.53 400.62C133.82 394.68 133.58 388.65 135.05 382.86C135.84 379.75 136.07 376.11 137.1 373.14C137.48 372.07 138.43 371.38 138.87 370.33C139.6 368.61 139.67 366.68 140.32 364.94C141.89 360.74 144.24 356.77 145.7 352.52C146.33 350.69 146.28 348.67 146.77 346.79C147.3 344.73 148.52 342.93 149.01 340.84C149.86 337.18 149.83 333.22 150.14 329.48C150.79 321.54 149.63 314.08 149.65 306.22C149.66 303.72 148.87 300.04 150.26 297.87C154.48 297.94 154.67 303.11 155.43 306.24C157.81 316.06 158.28 321.05 157.91 331.3C157.73 336.6 156.3 340.46 155.17 345.48C154.73 347.41 154.93 349.6 154.27 351.45C152.9 355.27 150.61 358.96 149.32 362.94C147.82 367.54 146.74 372.41 145.04 376.91C144.51 378.32 143.26 379.17 142.74 380.56C142.05 382.43 142.44 384.53 141.69 386.38C141.22 387.52 140.05 388.13 139.6 389.28C137.56 394.46 134.61 411.61 136.2 416.69C136.81 418.64 140.33 422.74 141.68 424.46C146.35 430.38 150.57 436.9 155.14 442.93C155.75 443.75 156.84 443.93 157.48 444.69C159.62 447.25 161.01 452.6 165.31 451.48C166.8 449.49 167.89 438.59 166.98 436.15C165.13 431.19 161.81 426.84 159.41 422.26C156.16 416.03 153.06 404.95 152.59 397.88C152.32 393.79 150.34 378.26 156.95 379.64C158.89 382.94 157.87 387.8 158.6 391.5C159.98 398.58 162.57 406.95 166.45 412.92C168.58 416.18 167.52 419.04 172.61 419.07C174.93 416.47 176.02 412.43 178.07 409.51C181.16 405.11 187.22 397.87 190.79 393.95C193.6 390.86 198.77 386.85 199.03 382.38C199.43 375.56 192 365.74 189.51 359.29C188.29 356.14 185.35 354.13 187.64 350.46C198.05 346.82 204.45 364.78 209.54 370.26C217.15 365.84 215.91 356.76 219.48 350.58C221.31 347.42 220.62 343.16 225.5 344.28C227.58 347.71 226.04 353.28 224.9 356.87C223.26 362.04 222.16 367.01 219.92 371.99C218.46 375.23 215.52 378.16 214.41 381.51C212.79 386.36 214.22 392.85 214.4 397.88C214.77 408 214.63 418.8 213.82 428.89C213.61 431.45 211.88 433.4 211.32 435.84C210.62 438.87 211.07 442.05 210.45 445.06C210.14 446.54 209.16 447.44 208.68 448.8C207.7 451.61 207.98 454.73 207.45 457.61C207.1 459.55 205.72 461.11 205.53 463.09C205.34 465.03 211.44 481.26 212.72 482.25C215.93 481.94 224.82 471.41 227.26 468.71C230 465.67 235.15 462.88 236.41 458.73C237.62 454.78 234.4 437.35 232.8 433.21C232.29 431.92 231.07 431.21 230.67 429.82C229.87 427.08 230.54 424 229.73 421.19C229.28 419.65 227.89 418.67 227.47 417.06C226.77 414.41 227.16 411.39 226.86 408.67C226.47 405.2 224.68 401.66 224.46 398.33C224.18 394.02 226.08 387.33 227.46 383.23C227.98 381.69 229.19 380.62 229.76 379.11C233.22 369.96 239.03 362.9 247.29 357.42C250.95 355 256.49 354.66 259.66 351.54C261.63 349.59 260.82 346.93 261.93 344.67C262.41 343.69 263.39 343.08 263.94 342.15C266.47 337.83 268.25 333.15 271.49 329.16C274.48 325.47 278.4 322.21 282.37 319.53C284.27 318.25 287.73 317.19 288.9 315.14C291.46 310.66 287.27 303.41 286.53 298.87C286.29 297.37 286.62 295.66 286.08 294.23C285.36 292.32 281.83 290.8 279.98 290.27C277.77 289.65 275.31 290.13 273.03 289.84C269.75 289.41 265.38 287.49 262.41 285.99C248.76 279.07 237.47 267.39 224.5 259.57C220.33 257.06 208.69 254.17 206.2 251.5C206.91 249.26 210.21 249.26 212.28 249.3C215.83 249.36 220.18 249.67 223.5 251.02C224.87 251.57 225.91 252.62 227.35 253.03C242.54 257.36 252.99 273.44 266.06 281.84C269.5 284.06 277.97 290.21 282.33 287.11C284.04 285.9 283.32 283.32 282.65 281.68C280.78 277.09 278.56 272.24 277.27 267.45C276.12 263.19 273.6 259.22 271.57 255.4C270.83 254 270.82 252.34 270.11 250.92C265.85 242.33 261.24 233.85 255.92 225.87C252.28 220.41 249.45 213.85 244.66 209.29C241.17 209.38 239.1 213.03 236.06 214.41C230.83 216.78 227.41 213.56 221.48 218.95C220.11 220.2 219.73 226.44 215.47 227.27C208.34 228.67 209.98 223.48 208.33 219.66C207.78 218.36 206.11 218.2 205.66 216.82C204.7 213.88 205.69 210.65 205.16 207.74C204.91 206.35 203.32 206.18 202.89 204.96C202.42 203.61 203.41 202.47 203.11 201.17C202.24 197.46 198.79 196.65 199.4 192.23C200 187.86 205.59 188.86 206.68 185.37C205.63 183.44 202.38 183.02 200.42 181.87ZM113.82 302.13C113.35 303.04 112.88 303.95 112.41 304.85C112.88 304.86 113.35 304.87 113.82 304.87C113.82 303.96 113.82 303.04 113.82 302.13ZM290.56 333.13C289.42 332.81 288.22 332.63 287.16 333.43C285.98 334.3 277.28 346.32 276.31 348.12C275.47 349.67 273.87 349.87 273.45 351.77C272.71 355.16 274.7 355.37 275.99 357.75C273.59 360.14 269.29 358.85 267.53 362.62C266.78 364.21 267.08 366.1 266.75 367.78C264.38 379.81 263.12 391.42 264.01 403.81C264.3 407.86 264.49 415.52 269.28 416.87C271.93 414.59 276.08 403.22 277.52 399.51C278.1 398.02 279.22 396.85 279.78 395.4C285.34 380.87 288.78 365.53 289.88 350C290.23 345.12 292.15 337.76 290.56 333.13ZM253.78 369.21C252.46 369.23 252.26 370.3 251.25 370.95C245.8 374.45 241.64 379.77 239.44 386.05C238.62 388.39 238.88 390.91 238.48 393.32C237.72 397.85 236.75 402.4 236.7 407C236.6 415.89 238.59 424.58 238.72 433.45C238.78 437.69 238.47 449.91 240.55 453.17C244.72 453.08 250.41 444.26 252.87 440.99C256.3 436.41 262.04 431.34 263.48 425.66C264.34 422.3 262.4 420.1 261.91 416.97C261.49 414.3 261.75 411.43 260.89 408.83C260.45 407.51 259.35 406.62 258.86 405.31C258.2 403.54 258.41 401.64 257.94 399.82C257.22 397.09 255.71 394.81 255.3 391.95C254.62 387.18 254.03 381.72 254.32 376.91C254.47 374.34 255.42 371.4 253.78 369.21ZM200.42 401.18C192.68 405.42 187.35 414.19 182.15 420.87C180.28 423.27 176.67 426.4 177.06 429.78C177.49 433.58 186.05 441 188.89 443.85C192.41 447.38 195.03 453.09 200.42 453.4C202.87 450.18 202.23 444.64 202.35 440.75C202.64 431.46 204 422.26 203.22 412.95C202.89 408.98 203.78 403.96 200.42 401.18ZM172.15 443.77C169.26 445.21 169.89 456.16 170.33 459.22C170.77 462.33 174.1 464.41 176.14 466.63C181.45 472.39 186.06 478.89 191.8 484.26C193.65 485.99 195.01 488.73 197.69 489.19C199.41 486.62 198.8 482.92 198.84 479.97C198.9 476.18 200.09 470.48 198.6 466.94C197.65 464.66 186.55 456.95 184.03 454.64C180.65 451.55 176.61 445.07 172.15 443.77ZM203.62 492.58C205.34 491.32 207.45 489.65 208.3 487.63C209.83 483.99 208.74 476.55 203.62 477.36C201.99 480.65 199.85 490.31 203.62 492.58Z"></path>
+    </symbol>
+    <symbol id="i-lozenge" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="1.1">
+        <path d="M12 2 18 12 12 22 6 12Z"></path>
+      </g>
+      <circle cx="12" cy="12" r="2" fill="currentColor"></circle>
+    </symbol>
+    <symbol id="i-corner" viewBox="0 0 64 64">
+      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <path d="M2 40C2 19 19 2 40 2"></path>
+        <path d="M2 29C2 14 14 2 29 2" opacity=".5"></path>
+        <path d="M12 40c0-15 13-28 28-28" opacity=".8"></path>
+        <path d="M12 40c8 0 14-6 14-14 0-5-4-8-8-6-3 1.5-3 6 1 6.5"></path>
+        <path d="M40 12c0 8-6 14-14 14"></path>
+      </g>
+      <circle cx="20.6" cy="26.3" r="1.7" fill="currentColor"></circle>
+    </symbol>
+    <symbol id="i-emblem" viewBox="0 0 120 120">
+      <!-- شعار المملكة — the national emblem, taken verbatim from the public-domain
+           vector published via the Saudi national design portal (nd.gea.gov.sa,
+           via Wikimedia Commons "Emblem of Saudi Arabia (2).svg"). One path in
+           a 780×864 box, fitted here to 96 units tall and centred: the same
+           numbers scripts/og-image.js uses, so the seal and the link preview
+           render the identical outline. -->
+      <g fill="currentColor" fill-rule="evenodd" transform="translate(16.6667 8) scale(0.111111)">
+        <path d="M499.59,782.64c31.05-32.96,24.48-70.19-0.36-70.61c8.88,27.36-11.52,45.05-19.28,54.15 c-19.56-16.82-39.82-35.52-60.79-54.77c102.31-84.63,214.28-159.7,360.57-162.06c-157.51-56.57-283.24,39.58-389.69,135.51 C283.58,588.93,157.86,492.78,0.31,549.35c146.32,2.36,258.28,77.42,360.61,162.06c-21.01,19.25-41.25,37.95-60.84,54.77 c-7.7-9.1-28.11-26.79-19.28-54.15c-24.82,0.42-31.4,37.65-0.32,70.61c-12.43,10.35-32.56,27.86-48.58,32.06 c-12.32,3.22-22.21-3.18-24.44-16.53c-4.7-28.19-48.37-23.98-43.03,15.84c4.9,36.31,48.99,52.15,86.77,35.33 c14.99-6.69,35.58-25.67,52.48-39.46c7.73,9.04,28.13,26.72,19.27,54.12c24.84-0.46,31.4-37.65,0.35-70.66 c22.06-18.82,44.2-38.23,66.74-57.43c22.52,19.19,44.67,38.61,66.75,57.43c-31.07,33.01-24.51,70.2,0.34,70.66 c-8.86-27.4,11.54-45.06,19.25-54.12c16.93,13.79,37.5,32.77,52.51,39.46c37.78,16.82,81.84,0.98,86.74-35.33 c5.34-39.82-38.31-44.03-43.05-15.84c-2.23,13.35-12.09,19.74-24.43,16.53C532.13,810.5,512.01,792.99,499.59,782.64 M306.39,254.77 c-23.73,62.73-25.04,133.37,9.08,211.06c-5.44-80.68,12.26-147.32,45.17-197.54l6.95,69.18h-8.11l8.11,80.99h-8.11l8.11,80.97h-8.11 l8.1,80.87l-22.92,22.85h45.38h45.39l-22.94-22.85l8.12-80.87h-8.12l8.12-80.97h-8.12l8.12-80.99h-8.12l6.96-69.18 c32.9,50.22,50.61,116.91,45.17,197.54c34.09-77.69,32.81-148.3,9.08-211.06c40.29,47.51,71.46,103.06,85.47,172.5 c14.54-88.08-10.32-159.97-55.89-215.75c44.12,31.82,82.03,72.15,108.54,126.69c-6.18-83.45-48.4-137.56-106.56-176.33 c50.26,16.43,91.3,43.93,128.13,92.75c-24.63-86.59-78.29-121.27-144.79-140.77c45.35-3.31,88.2,1.8,130.61,28.22 C573.18,80.01,511.39,69.7,448.73,76.6c26.35-13.42,56-20.13,87.85-15.38c-35.9-26.48-83.79-29.1-124.78-6.78l-21.76-54.9 l-21.79,54.87c-41-22.29-88.85-19.68-124.75,6.81c31.83-4.74,61.46,1.96,87.82,15.38c-62.64-6.9-124.41,3.42-170.47,65.48 c42.44-26.42,85.26-31.53,130.63-28.22c-66.48,19.5-120.16,54.18-144.77,140.77c36.8-48.81,77.86-76.32,128.13-92.75 c-58.2,38.76-100.4,92.88-106.59,176.33c26.5-54.54,64.44-94.87,108.54-126.69c-45.57,55.78-70.43,127.67-55.89,215.75 C234.92,357.83,266.09,302.28,306.39,254.77"></path>
+      </g>
+    </symbol>
+    <symbol id="i-no-kids" viewBox="0 0 64 64">
+      <!-- يمنع اصطحاب الأطفال.
+
+           Pictogram silhouettes, the way a door sign draws people: heads, and
+           one shape each for the body. The earlier version gave them separate
+           arms and legs and it read as crude cut-outs — at the 44-58px these
+           occupy there is no room for a 2px limb. The legs are a notch cut
+           into the boy's silhouette instead, and the girl's dress does the
+           same work by flaring. They are not holding hands either: the bar
+           that joined them crossed the girl's dress and read as a line
+           through her rather than as two arms.
+
+           Scaled and centred about (32,32): drawn at their natural height the
+           pair sat low and left inside the ring. -->
+      <g fill="currentColor" transform="translate(32 32) scale(1.15) translate(-31 -30.7)">
+        <circle cx="24" cy="21.4" r="4.8"></circle>
+        <path d="M20 27 16.6 44.8 31.4 44.8 28 27Z"></path>
+        <circle cx="40" cy="21.4" r="4.8"></circle>
+        <path d="M36 27 34.6 44.8 38.8 44.8 40 37.5 41.2 44.8 45.4 44.8 44 27Z"></path>
+      </g>
+      <g fill="none" stroke="currentColor" stroke-width="3.4">
+        <circle cx="32" cy="32" r="28.5"></circle>
+        <path d="M12.6 51.4 51.4 12.6" stroke-linecap="round"></path>
+      </g>
+    </symbol>
+    <symbol id="i-no-camera" viewBox="0 0 64 64">
+      <!-- يمنع التصوير وجولات الكاميرا.
+
+           A camera, not the phone this started as. A phone at this size is a
+           rounded rectangle, and tilted across the slash it read as a pen —
+           there is nothing in the shape to say "phone" once the screen is a
+           few pixels wide. A camera has a silhouette nothing else shares:
+           body, viewfinder hump, lens.
+
+           One path, fill-rule="evenodd". The outline is a single continuous
+           subpath — body and hump traced together rather than overlapped,
+           because two overlapping subpaths would cancel under evenodd and
+           punch a hole exactly where they meet. The lens ring and the flash
+           are the holes; the solid disc inside the lens is a separate
+           element sitting in the punched-out gap. -->
+      <path fill="currentColor" fill-rule="evenodd" d="M13 25.5 A3.5 3.5 0 0 1 16.5 22 H20 V18.5 A1.5 1.5 0 0 1 21.5 17 H30.5
+               A1.5 1.5 0 0 1 32 18.5 V22 H47.5 A3.5 3.5 0 0 1 51 25.5 V43.5
+               A3.5 3.5 0 0 1 47.5 47 H16.5 A3.5 3.5 0 0 1 13 43.5Z
+               M40.5 34.5 A8.5 8.5 0 1 1 23.5 34.5 A8.5 8.5 0 1 1 40.5 34.5Z
+               M43 25.5 H46.5 A1.5 1.5 0 0 1 46.5 28.5 H43 A1.5 1.5 0 0 1 43 25.5Z"></path>
+      <circle cx="32" cy="34.5" r="4.2" fill="currentColor"></circle>
+      <g fill="none" stroke="currentColor" stroke-width="3.4">
+        <circle cx="32" cy="32" r="28.5"></circle>
+        <path d="M12.6 51.4 51.4 12.6" stroke-linecap="round"></path>
+      </g>
+    </symbol>
+    <symbol id="i-crown" viewBox="0 0 130 100">
+      <!-- التاج الملكي الأردني — the Hashemite royal crown, the family's own
+           artwork, used at their explicit request. It replaces the generic
+           heraldic crown that stood here while the reference was unavailable.
+
+           Two things were changed and nothing else. Every #a2a2a2 became
+           currentColor so the crown can be silver on the purple seal and foil
+           on wax. And the 44 beads, each drawn in the source as a 2.833-square
+           <rect> filled with a one-dot <pattern>, became explicit <circle>s:
+           pattern content inherits colour from the pattern's own place in the
+           tree, never from the element referencing it, so leaving them as
+           patterns would have frozen the beads at one grey while the rest of
+           the crown changed colour around them. Verified against the source
+           side by side at 260px.
+
+           The box is 130x100, NOT the 120x120 the old crown used. Anything
+           placing it has to pass width="130" height="100" or it is drawn at
+           the wrong size and simply clipped by its frame. -->
+      <g fill="currentColor" stroke="currentColor">
+      <g transform="translate(-144.75,-442.77895)">
+      <circle cx="181.899" cy="503.286" r="1.417"></circle>
+      <circle cx="180.57" cy="500.786" r="1.417"></circle>
+      <circle cx="179.329" cy="498.239" r="1.417"></circle>
+      <circle cx="178.213" cy="495.637" r="1.417"></circle>
+      <circle cx="177.175" cy="493.003" r="1.417"></circle>
+      <circle cx="176.299" cy="490.311" r="1.417"></circle>
+      <circle cx="175.572" cy="487.575" r="1.417"></circle>
+      <circle cx="175.06" cy="484.794" r="1.417"></circle>
+      <circle cx="174.841" cy="481.973" r="1.417"></circle>
+      <circle cx="175.057" cy="479.157" r="1.417"></circle>
+      <circle cx="175.858" cy="476.452" r="1.417"></circle>
+      <circle cx="177.167" cy="473.95" r="1.417"></circle>
+      <circle cx="178.913" cy="471.73" r="1.417"></circle>
+      <circle cx="180.943" cy="469.765" r="1.417"></circle>
+      <circle cx="183.194" cy="468.053" r="1.417"></circle>
+      <circle cx="185.612" cy="466.588" r="1.417"></circle>
+      <circle cx="154.425" cy="510.683" r="1.417"></circle>
+      <circle cx="152.297" cy="508.827" r="1.417"></circle>
+      <circle cx="150.467" cy="506.678" r="1.417"></circle>
+      <circle cx="148.946" cy="504.301" r="1.417"></circle>
+      <circle cx="147.782" cy="501.727" r="1.417"></circle>
+      <circle cx="147.052" cy="498.999" r="1.417"></circle>
+      <circle cx="146.781" cy="496.189" r="1.417"></circle>
+      <circle cx="146.957" cy="493.372" r="1.417"></circle>
+      <circle cx="147.528" cy="490.606" r="1.417"></circle>
+      <circle cx="148.5" cy="487.955" r="1.417"></circle>
+      <circle cx="149.876" cy="485.491" r="1.417"></circle>
+      <circle cx="151.648" cy="483.296" r="1.417"></circle>
+      <circle cx="153.732" cy="481.391" r="1.417"></circle>
+      <circle cx="156.059" cy="479.786" r="1.417"></circle>
+      <circle cx="158.571" cy="478.493" r="1.417"></circle>
+      <circle cx="161.207" cy="477.473" r="1.417"></circle>
+      <circle cx="163.92" cy="476.668" r="1.417"></circle>
+      <circle cx="166.694" cy="476.118" r="1.417"></circle>
+      <circle cx="169.502" cy="475.777" r="1.417"></circle>
+      </g>
+      <g transform="translate(130,0) scale(-1,1)">
+      <g transform="translate(-144.75,-442.77895)">
+      <circle cx="181.899" cy="503.286" r="1.417"></circle>
+      <circle cx="180.57" cy="500.786" r="1.417"></circle>
+      <circle cx="179.329" cy="498.239" r="1.417"></circle>
+      <circle cx="178.213" cy="495.637" r="1.417"></circle>
+      <circle cx="177.175" cy="493.003" r="1.417"></circle>
+      <circle cx="176.299" cy="490.311" r="1.417"></circle>
+      <circle cx="175.572" cy="487.575" r="1.417"></circle>
+      <circle cx="175.06" cy="484.794" r="1.417"></circle>
+      <circle cx="174.841" cy="481.973" r="1.417"></circle>
+      <circle cx="175.057" cy="479.157" r="1.417"></circle>
+      <circle cx="175.858" cy="476.452" r="1.417"></circle>
+      <circle cx="177.167" cy="473.95" r="1.417"></circle>
+      <circle cx="178.913" cy="471.73" r="1.417"></circle>
+      <circle cx="180.943" cy="469.765" r="1.417"></circle>
+      <circle cx="183.194" cy="468.053" r="1.417"></circle>
+      <circle cx="185.612" cy="466.588" r="1.417"></circle>
+      <circle cx="154.425" cy="510.683" r="1.417"></circle>
+      <circle cx="152.297" cy="508.827" r="1.417"></circle>
+      <circle cx="150.467" cy="506.678" r="1.417"></circle>
+      <circle cx="148.946" cy="504.301" r="1.417"></circle>
+      <circle cx="147.782" cy="501.727" r="1.417"></circle>
+      <circle cx="147.052" cy="498.999" r="1.417"></circle>
+      <circle cx="146.781" cy="496.189" r="1.417"></circle>
+      <circle cx="146.957" cy="493.372" r="1.417"></circle>
+      <circle cx="147.528" cy="490.606" r="1.417"></circle>
+      <circle cx="148.5" cy="487.955" r="1.417"></circle>
+      <circle cx="149.876" cy="485.491" r="1.417"></circle>
+      <circle cx="151.648" cy="483.296" r="1.417"></circle>
+      <circle cx="153.732" cy="481.391" r="1.417"></circle>
+      <circle cx="156.059" cy="479.786" r="1.417"></circle>
+      <circle cx="158.571" cy="478.493" r="1.417"></circle>
+      <circle cx="161.207" cy="477.473" r="1.417"></circle>
+      <circle cx="163.92" cy="476.668" r="1.417"></circle>
+      <circle cx="166.694" cy="476.118" r="1.417"></circle>
+      <circle cx="169.502" cy="475.777" r="1.417"></circle>
+      </g>
+      </g>
+      <g transform="translate(-144.75,-442.77895)">
+      <circle cx="209.831" cy="498.851" r="1.417"></circle>
+      <circle cx="209.831" cy="496.018" r="1.417"></circle>
+      <circle cx="209.831" cy="493.184" r="1.417"></circle>
+      <circle cx="209.831" cy="490.351" r="1.417"></circle>
+      <circle cx="209.831" cy="487.518" r="1.417"></circle>
+      <circle cx="209.831" cy="484.684" r="1.417"></circle>
+      <circle cx="209.831" cy="481.851" r="1.417"></circle>
+      <circle cx="209.831" cy="479.018" r="1.417"></circle>
+      <circle cx="209.831" cy="476.184" r="1.417"></circle>
+      <path stroke-linejoin="miter" d="m171.7,541s0.5082-1.48,0.0708-3.113c-0.4374-1.632-1.654-2.637-1.654-2.637s0.447-3.101-0.5958-5.583-3.571-4.333-3.571-4.333-1.765-1.52-2.027-4.001c-0.0446-0.4228,0.0711-1.259,0.0711-1.259" stroke="currentColor" stroke-linecap="round" stroke-width="1px" fill="none"></path>
+      <path stroke-linejoin="miter" d="m164.2,521.4s2.57,1.613,5.396,0.9805c2.827-0.6321,4.375-3.605,4.375-3.605s2.532,2.422,6.166,1.834c3.634-0.5878,5.479-4.041,5.479-4.041s3.199,2.942,6.584,2.666c3.385-0.2759,6.084-3.666,6.084-3.666s2.632,2.905,5.875,2.625c3.243-0.2795,5.624-3.125,5.624-3.125s2.3,2.929,5.626,3.125c3.326,0.1962,5.875-2.625,5.875-2.625s2.697,3.39,6.082,3.666c3.385,0.2759,6.584-2.666,6.584-2.666s1.844,3.453,5.479,4.041c3.634,0.5878,6.168-1.834,6.168-1.834s1.548,2.973,4.375,3.605c2.827,0.6321,5.395-0.9805,5.395-0.9805" stroke="currentColor" stroke-linecap="round" stroke-width="2" fill="none"></path>
+      <path d="m218.5,530.4-17.33,0,8.667-3.667,0,7.333z" fill-rule="evenodd" fill="currentColor"></path>
+      <path stroke-linejoin="miter" d="m209.8,526.7-8.667,3.667,8.667,3.667,8.667-3.667z" stroke="currentColor" stroke-linecap="butt" stroke-width="1px" fill="none"></path>
+      <circle cy="530.4" cx="223.1" r="2.833" fill="currentColor"></circle>
+      <path fill-rule="evenodd" fill="currentColor" d="m245,530.4-17.33,0,8.667-3.667,0,7.333z"></path>
+      <path stroke-linejoin="miter" d="m236.3,526.7-8.667,3.667,8.667,3.667l8.7-3.7z" stroke="currentColor" stroke-linecap="butt" stroke-width="1px" fill="none"></path>
+      <path stroke-linejoin="miter" d="m262,513.4-4-6.5s8.544-4.588,7.333-14.58c-1.4-11.9-16.8-12.9-16.8-12.9" stroke="currentColor" stroke-linecap="butt" stroke-width="3" fill="none"></path>
+      <path stroke-linejoin="miter" d="m247.9,541s-0.5082-1.48-0.0708-3.113c0.4374-1.632,1.654-2.637,1.654-2.637s-0.447-3.101,0.5958-5.583,3.571-4.333,3.571-4.333,1.765-1.52,2.027-4.001c0.0446-0.4228-0.0711-1.259-0.0711-1.259" stroke="currentColor" stroke-linecap="round" stroke-width="1px" fill="none"></path>
+      <path fill="currentColor" d="m249.4,533.2a2.833,2.833,0,0,1,-2.699,-2.83,2.833,2.833,0,0,1,2.833,-2.833,2.833,2.833,0,0,1,1.658,0.5358l-1.146,1.631z"></path>
+      <circle cx="-196.6" transform="scale(-1,1)" cy="530.4" r="2.833" fill="currentColor"></circle>
+      <path d="m192,530.4-17.33,0,8.667-3.667,0,7.333z" fill-rule="evenodd" fill="currentColor"></path>
+      <path stroke-linejoin="miter" d="m183.3,526.7,8.667,3.667-8.667,3.667-8.667-3.667z" stroke="currentColor" stroke-linecap="butt" stroke-width="1px" fill="none"></path>
+      <path fill="currentColor" d="m170.2,533.2a2.833,2.833,0,0,0,2.699,-2.83,2.833,2.833,0,0,0,-2.833,-2.833,2.833,2.833,0,0,0,-1.658,0.5358l1.146,1.631z"></path>
+      <path stroke-linejoin="miter" d="m166,525.4,87.67,0" stroke="currentColor" stroke-linecap="round" stroke-width="2" fill="none"></path>
+      <path stroke-linejoin="miter" d="m170.2,535.3,79.33,0" stroke="currentColor" stroke-linecap="round" stroke-width="2" fill="none"></path>
+      <path stroke-linejoin="miter" d="m171.7,541,76.17,0" stroke="currentColor" stroke-linecap="round" stroke-width="2" fill="none"></path>
+      <path stroke-linejoin="miter" d="m209.8,445.3,4.056,10.56s-1.691,1.778-4.056,1.778-4.056-1.778-4.056-1.778z" stroke="currentColor" stroke-linecap="butt" stroke-width="1px" fill="none"></path>
+      <path stroke-linejoin="miter" d="m209.8,457.6c2.069-0.0556,4.278,2.667,4.278,2.667l-4.278,2.944-4.278-2.944s2.209-2.611,4.278-2.667z" stroke="currentColor" stroke-linecap="butt" stroke-width="1px" fill="none"></path>
+      <path stroke-linejoin="miter" d="m223.2,462s-1.274-0.9393-4.722-1.389c-1.955-0.2549-4.389-0.3889-4.389-0.3889" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" fill="none"></path>
+      <path stroke-linejoin="miter" d="m196.4,462s1.274-0.9393,4.722-1.389c1.955-0.2549,4.389-0.3889,4.389-0.3889" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" fill="none"></path>
+      <path stroke-linejoin="miter" d="m205.1,465.3,4.778,6.444,4.778-6.444m-11.19,33.89,6.417,6.25,6.417-6.25m-6.417-27.44s-2.861-4.58-4.778-6.444c-4.111-4-6.377-4.396-8.611-3.278-1.278,0.6392-1.194,3.333-1.194,3.333s-2.281-4.045-12.81,1c-4.799,2.3-9.935,5.89-10.84,11.33-1.603,9.604,0.5331,13.67,2.481,20.67,0.5945,2.135,0.25,5,0.25,5l9.167,4.833,4.75-7.75s-8.21-9.2-7.75-17.67c0.7268-13.38,12.88-17.98,14.75-17.42,4.335,1.311,8.468,9.531,9.333,15.5,1.201,8.282-1.167,18.33-1.167,18.33l6.417,6.25m0-33.69s2.861-4.58,4.778-6.444c4.111-4,6.377-4.396,8.611-3.278,1.278,0.6392,1.194,3.333,1.194,3.333s2.281-4.045,12.81,1c4.799,2.3,9.935,5.89,10.84,11.33,1.603,9.604-0.5331,13.67-2.481,20.67-0.5945,2.135-0.25,5-0.25,5l-9.167,4.833-4.75-7.75s8.21-9.2,7.75-17.67c-0.7268-13.38-12.88-17.98-14.75-17.42-4.335,1.311-8.468,9.531-9.333,15.5-1.201,8.282,1.167,18.33,1.167,18.33l-6.417,6.25" stroke="currentColor" stroke-linecap="butt" stroke-width="2.5" fill="none"></path>
+      <circle cy="511.9" cx="221.6" r="2.111" fill="currentColor"></circle>
+      <circle cx="246.3" cy="515" r="2.111" fill="currentColor"></circle>
+      <path d="m211.9,512c0-0.8645-0.6013-1.476-0.6013-1.476s2.679-1.042,3.49-0.8238c0.8111,0.2186,0.6396,0.616,1.056,1,0.416,0.384,1.111,0.6517,1.111,1.299,0,0.6476-0.6951,0.9153-1.111,1.299-0.416,0.384-0.2445,0.7814-1.056,1-0.8111,0.2186-3.49-0.8238-3.49-0.8238s0.6013-0.6111,0.6013-1.476z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m209.8,509.9c-0.8645,0-1.476,0.6013-1.476,0.6013s-1.042-2.679-0.8238-3.49c0.2186-0.8111,0.616-0.6396,1-1.056,0.384-0.416,0.6517-1.111,1.299-1.111,0.6476,0,0.9153,0.6951,1.299,1.111,0.384,0.416,0.7814,0.2445,1,1.056,0.2186,0.8111-0.8238,3.49-0.8238,3.49s-0.6111-0.6013-1.476-0.6013z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m207.7,512c0,0.8645,0.6013,1.476,0.6013,1.476s-2.679,1.042-3.49,0.8238c-0.8111-0.2186-0.6396-0.616-1.056-1-0.416-0.384-1.111-0.6517-1.111-1.299,0-0.6476,0.6951-0.9153,1.111-1.299,0.416-0.384,0.2445-0.7814,1.056-1,0.8111-0.2186,3.49,0.8238,3.49,0.8238s-0.6013,0.6111-0.6013,1.476z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m236.6,514.3c0.2237-0.835-0.1989-1.581-0.1989-1.581s2.858-0.3135,3.584,0.1076c0.7268,0.4211,0.4584,0.7605,0.7608,1.239,0.3024,0.4786,0.9046,0.9171,0.737,1.543-0.1676,0.6256-0.9083,0.7042-1.41,0.9675-0.5012,0.2633-0.4384,0.6915-1.278,0.6927-0.84,0.001-3.158-1.699-3.158-1.699s0.739-0.4347,0.9627-1.27z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m235.1,511.7c-0.835-0.2237-1.581,0.1989-1.581,0.1989s-0.3135-2.858,0.1076-3.584c0.4211-0.7268,0.7605-0.4584,1.239-0.7608,0.4786-0.3024,0.9171-0.9046,1.543-0.737,0.6256,0.1676,0.7042,0.9083,0.9675,1.41,0.2633,0.5012,0.6915,0.4384,0.6927,1.278,0.001,0.84-1.699,3.158-1.699,3.158s-0.4347-0.739-1.27-0.9628z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m232.5,513.2c-0.2237,0.835,0.1989,1.581,0.1989,1.581s-2.858,0.3135-3.584-0.1076c-0.7268-0.4211-0.4584-0.7605-0.7608-1.239-0.3024-0.4786-0.9046-0.9171-0.7369-1.543,0.1676-0.6256,0.9083-0.7042,1.41-0.9675,0.5012-0.2633,0.4384-0.6915,1.278-0.6927,0.84-0.001,3.158,1.699,3.158,1.699s-0.739,0.4347-0.9627,1.27z" fill-rule="evenodd" fill="currentColor"></path>
+      <path fill-rule="evenodd" fill="currentColor" d="m258.9,518c-0.7082-0.4958-1.554-0.3538-1.554-0.3538s0.6828-2.793,1.327-3.332c0.6443-0.539,0.8714-0.1706,1.425-0.2911,0.5532-0.1205,1.171-0.5364,1.702-0.1649z"></path>
+      <path d="m256,518.5c-0.4958,0.7082-0.3538,1.554-0.3538,1.554s-2.793-0.6828-3.332-1.327c-0.539-0.6443-0.1706-0.8714-0.2911-1.425-0.1205-0.5532-0.5364-1.171-0.1649-1.702,0.3714-0.5305,1.094-0.3511,1.655-0.4271s0.6484-0.4998,1.438-0.2137c0.7897,0.2863,2.387,2.677,2.387,2.677s-0.8431,0.1557-1.339,0.8638z" fill-rule="evenodd" fill="currentColor"></path>
+      <circle cx="-198" transform="scale(-1,1)" cy="511.9" r="2.111" fill="currentColor"></circle>
+      <circle transform="scale(-1,1)" cy="515" cx="-173.3" r="2.111" fill="currentColor"></circle>
+      <path d="m183.1,514.3c-0.2237-0.835,0.1989-1.581,0.1989-1.581s-2.858-0.3135-3.584,0.1076c-0.7268,0.4211-0.4584,0.7605-0.7608,1.239-0.3024,0.4786-0.9046,0.9171-0.737,1.543,0.1676,0.6256,0.9083,0.7042,1.41,0.9675,0.5012,0.2633,0.4384,0.6915,1.278,0.6927,0.84,0.001,3.158-1.699,3.158-1.699s-0.739-0.4347-0.9627-1.27z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m184.6,511.7c0.835-0.2237,1.581,0.1989,1.581,0.1989s0.3135-2.858-0.1076-3.584c-0.4211-0.7268-0.7605-0.4584-1.239-0.7608-0.4786-0.3024-0.9171-0.9046-1.543-0.737-0.6256,0.1676-0.7042,0.9083-0.9675,1.41-0.2633,0.5012-0.6915,0.4384-0.6927,1.278-0.001,0.84,1.699,3.158,1.699,3.158s0.4347-0.739,1.27-0.9628z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m187.2,513.2c0.2237,0.835-0.1989,1.581-0.1989,1.581s2.858,0.3135,3.584-0.1076c0.7268-0.4211,0.4584-0.7605,0.7608-1.239,0.3024-0.4786,0.9046-0.9171,0.7369-1.543-0.1676-0.6256-0.9083-0.7042-1.41-0.9675-0.5012-0.2633-0.4384-0.6915-1.278-0.6927-0.84-0.001-3.158,1.699-3.158,1.699s0.739,0.4347,0.9627,1.27z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m160.7,518c0.7082-0.4958,1.554-0.3538,1.554-0.3538s-0.6828-2.793-1.327-3.332c-0.6443-0.539-0.8714-0.1706-1.425-0.2911-0.5532-0.1205-1.171-0.5364-1.702-0.1649z" fill-rule="evenodd" fill="currentColor"></path>
+      <path d="m163.7,518.5c0.4958,0.7082,0.3538,1.554,0.3538,1.554s2.793-0.6828,3.332-1.327c0.539-0.6443,0.1706-0.8714,0.2911-1.425,0.1205-0.5532,0.5364-1.171,0.1649-1.702-0.3714-0.5305-1.094-0.3511-1.655-0.4271s-0.6484-0.4998-1.438-0.2137c-0.7897,0.2863-2.387,2.677-2.387,2.677s0.8431,0.1557,1.339,0.8638z" fill-rule="evenodd" fill="currentColor"></path>
+      <path stroke-linejoin="miter" d="m157.7,513.4,4-6.5s-8.544-4.588-7.333-14.58c1.451-11.99,16.83-12.92,16.83-12.92" stroke="currentColor" stroke-linecap="butt" stroke-width="3" fill="none"></path>
+      </g>
+      </g>
+    </symbol>
+</svg>
+
+<svg class="bg-motif" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- the flower is 420x594; every use keeps 1:1.414 or it distorts -->
+    <pattern id="lavTile" width="250" height="310" patternUnits="userSpaceOnUse">
+      <use href="#i-lavender" x="18" y="6" width="78" height="110"></use>
+      <use href="#i-lavender" x="146" y="152" width="78" height="110"></use>
+      <use href="#i-lavender" x="58" y="200" width="56" height="79"></use>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#lavTile)"></rect>
+</svg>
+
+<!-- ═══ بوابة الظرف ═══════════════════════════════════════════════════════
+     A sealed envelope filling the screen: the seal breaks, the flap folds
+     back, and the card rises out of the pocket before the gate fades.
+     Added by JS only — it ships `hidden`, so if scripting ever fails the
+     invitation is simply already open rather than locked behind a shut
+     envelope. The men's invitation opens on two doors; this is the same
+     moment, in the ladies' paper.                                        -->
+<div class="gate" id="gate" hidden="">
+  <div class="gate__stage">
+
+    <div class="gate__envelope">
+      <div class="env" aria-hidden="true">
+
+        <!-- The card, behind the envelope face. It slides up out of the
+             pocket, so its lower half stays tucked behind the face the
+             whole way — which is what makes it read as being pulled out. -->
+        <div class="env__card">
+          <span class="env__card-rule"></span>
+          <svg class="env__card-mark" viewBox="0 0 420 594" aria-hidden="true" focusable="false">
+            <use href="#i-lavender" width="420" height="594"></use>
+          </svg>
+          <span class="env__card-rule"></span>
+        </div>
+
+        <svg class="env__face" viewBox="0 0 420 290" aria-hidden="true" focusable="false">
+          <defs>
+            <lineargradient id="envFace" x1="0" y1="0" x2=".35" y2="1">
+              <stop offset="0" stop-color="#FCFBFD"></stop>
+              <stop offset=".55" stop-color="#F3EFFA"></stop>
+              <stop offset="1" stop-color="#E5DDF2"></stop>
+            </lineargradient>
+            <lineargradient id="envFlap" x1=".5" y1="0" x2=".5" y2="1">
+              <stop offset="0" stop-color="#F9F6FD"></stop>
+              <stop offset="1" stop-color="#DFD5EE"></stop>
+            </lineargradient>
+          </defs>
+          <rect x="1" y="1" width="418" height="288" rx="12" fill="url(#envFace)"></rect>
+          <!-- the seams of the two side flaps folded in behind the face -->
+          <path class="env__seam" d="M1 289 L210 166 L419 289"></path>
+        </svg>
+
+        <!-- Hinged along its top edge. It folds away from the guest, and
+             fades near the end of the fold so it can never be caught
+             fighting the rising card for depth order. -->
+        <svg class="env__flap" viewBox="0 0 420 168" aria-hidden="true" focusable="false">
+          <path fill="url(#envFlap)" d="M13 1 L407 1 A12 12 0 0 1 418 13 L210 166 L2 13 A12 12 0 0 1 13 1 Z"></path>
+          <path class="env__seam" d="M2 13 L210 166 L418 13"></path>
+        </svg>
+      </div>
+
+      <button class="gate__seal" id="gateSeal" type="button" aria-label="افتحي الدعوة">
+        <svg viewBox="0 0 240 240" aria-hidden="true" focusable="false">
+          <circle cx="120" cy="120" r="114" fill="url(#sealFace)"></circle>
+          <circle cx="120" cy="120" r="98" fill="none" stroke="#2C1848" stroke-width="3" opacity=".45"></circle>
+          <circle cx="120" cy="120" r="90" fill="none" stroke="#F0F2F5" stroke-width="2" opacity=".45"></circle>
+          <!-- the same two devices as the seal on the card, same sizes:
+               a <use> of a <symbol> with no width/height renders at 100% of
+               the current viewport, not the symbol's own box. -->
+          <g color="#EDEBF3">
+            <g transform="translate(121 79.2) scale(.68)"><use href="#i-emblem" width="120" height="120"></use></g>
+            <!-- 130x100, and centred on the emblem's own vertical middle: the crown
+                 is wide and short where the emblem is square, so matching their
+                 boxes would have left it floating high in its half of the seal. -->
+            <!-- Smaller than the emblem's own box on purpose. The crown is wide and
+                 short, so matching box widths made it read as the louder of the
+                 two; this centres it at the emblem's mirror position (78.2 against
+                 161.8) so the pair sits symmetrically about the seal. -->
+            <g transform="translate(41.8 92) scale(.56)"><use href="#i-crown" width="130" height="100"></use></g>
+          </g>
+          <rect x="119" y="87" width="2" height="66" fill="#EDEBF3" opacity=".34"></rect>
+        </svg>
+      </button>
+    </div>
+
+    <p class="gate__title">دعوة خاصة</p>
+    <p class="gate__cta">اضغطي لفتح الدعوة</p>
+  </div>
+</div>
+
+<main>
+
+  <!-- ═══ بطاقة الدعوة ═══════════════════════════════════════════════════ -->
+  <section class="invite">
+    <div class="shell">
+      <div class="invite__card reveal is-visible">
+
+        <svg class="frame__edge frame__edge--start" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lozenge" width="24" height="24"></use></svg>
+        <svg class="frame__edge frame__edge--end" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lozenge" width="24" height="24"></use></svg>
+        <svg class="frame__edge frame__edge--bottom" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-lozenge" width="24" height="24"></use></svg>
+
+        <svg class="frame__corner frame__corner--tr" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-corner" width="64" height="64"></use></svg>
+        <svg class="frame__corner frame__corner--tl" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-corner" width="64" height="64"></use></svg>
+        <svg class="frame__corner frame__corner--br" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-corner" width="64" height="64"></use></svg>
+        <svg class="frame__corner frame__corner--bl" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-corner" width="64" height="64"></use></svg>
+
+        <p class="invite__basmala">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+
+        <blockquote class="invite__verse">
+          وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+          <cite class="invite__verse-ref">الروم ٢١</cite>
+        </blockquote>
+
+        <div class="divider" aria-hidden="true"><svg class="divider__mark" viewBox="0 0 420 594"><use href="#i-lavender" width="420" height="594"></use></svg></div>
+
+        <p class="invite__lead">تتشرف السيدة/</p>
+        <p class="invite__host">فاطمة محمد الحربي </p>
+        <p class="invite__lead">بدعوتكنّ لحفل زفاف ابنها</p>
+
+        <h1 class="invite__names">خالد عبدالمعين السفري</h1>
+
+        <p class="invite__lead">على الآنسة/</p>
+        <p class="invite__bride">رغد علي الصبحي</p>
+
+        <div class="divider" aria-hidden="true"><svg class="divider__mark" viewBox="0 0 420 594"><use href="#i-lavender" width="420" height="594"></use></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ التاريخ ═══════════════════════════════════════════════════════ -->
+  <section class="section" id="date">
+    <div class="shell">
+      <h2 class="section-title reveal is-visible">موعد الحفل</h2>
+      <div class="divider reveal is-visible" aria-hidden="true"><svg class="divider__mark" viewBox="0 0 420 594"><use href="#i-lavender" width="420" height="594"></use></svg></div>
+
+      <div class="dates">
+        <div class="card date-card reveal is-visible">
+          <p class="date-card__label">التقويم الميلادي</p>
+          <p class="date-card__day">الأربعاء</p>
+          <p class="date-card__value">٩ ديسمبر ٢٠٢٦</p>
+        </div>
+        <div class="card date-card reveal is-visible">
+          <p class="date-card__label">التقويم الهجري</p>
+          <p class="date-card__day">الأربعاء</p>
+          <p class="date-card__value">٢٩ / ٦ / <span class="nowrap">١٤٤٨ هـ</span></p>
+        </div>
+      </div>
+      <p class="lede reveal is-visible">الساعة ٩:٣٠ مساءً بتوقيت مكة المكرمة</p>
+    </div>
+  </section>
+
+  <!-- ═══ العد التنازلي ═════════════════════════════════════════════════ -->
+  <section class="section" id="countdown">
+    <div class="shell">
+      <h2 class="section-title reveal is-visible">بقي على الحفل</h2>
+      <div class="divider reveal is-visible" aria-hidden="true"><svg class="divider__mark" viewBox="0 0 420 594"><use href="#i-lavender" width="420" height="594"></use></svg></div>
+
+      <div class="count reveal is-visible" id="countGrid" hidden="">
+        <div class="count__cell"><span class="count__num" data-cd="days">—</span><span class="count__label">يوم</span></div>
+        <div class="count__cell"><span class="count__num" data-cd="hours">—</span><span class="count__label">ساعة</span></div>
+        <div class="count__cell"><span class="count__num" data-cd="minutes">—</span><span class="count__label">دقيقة</span></div>
+        <div class="count__cell"><span class="count__num" data-cd="seconds">—</span><span class="count__label">ثانية</span></div>
+      </div>
+      <p class="count__today reveal is-visible" id="countToday">اليوم يومنا — بانتظاركنّ</p>
+      <p class="sr-only" id="countLive" aria-live="off"></p>
+    </div>
+  </section>
+
+  <!-- ═══ المكان ═══════════════════════════════════════════════════════ -->
+  <section class="section" id="venue">
+    <div class="shell">
+      <h2 class="section-title reveal is-visible">المكان</h2>
+      <div class="divider reveal is-visible" aria-hidden="true"><svg class="divider__mark" viewBox="0 0 420 594"><use href="#i-lavender" width="420" height="594"></use></svg></div>
+
+      <div class="card venue reveal is-visible">
+        <p class="venue__name">قاعة مسايا</p>
+        <p class="venue__address">قاعة مسايا</p>
+
+        <div class="actions">
+          <a class="btn" href="https://maps.app.goo.gl/9Gfex62tiphwHBpo6?g_st=ic" target="_blank" rel="noopener noreferrer">افتحي في خرائط قوقل</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ تأكيد الحضور ═════════════════════════════════════════════════ -->
+  <section class="section" id="rsvp">
+    <div class="shell">
+      <div class="divider reveal is-visible" aria-hidden="true"><svg class="divider__mark" viewBox="0 0 420 594"><use href="#i-lavender" width="420" height="594"></use></svg></div>
+
+      <div class="notice reveal is-visible">
+        <span class="notice__mark" aria-hidden="true"></span>
+        <span><strong>الدعوة شخصية</strong><br>يرجى التكرم بالحضور مبكرًا</span>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item reveal is-visible">
+          <span class="timeline__time">٩:٣٠ مساءً</span>
+          <span class="timeline__what">الحضور</span>
+        </div>
+        <div class="timeline__item reveal is-visible">
+          <span class="timeline__time">١١:٣٠ مساءً</span>
+          <span class="timeline__what">الزفة</span>
+        </div>
+      </div>
+
+      <ul class="rules reveal is-visible">
+        <li class="rules__item">
+          <svg class="rules__icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><use href="#i-no-kids" width="64" height="64"></use></svg>
+          <span class="rules__label">يمنع اصطحاب الأطفال</span>
+        </li>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="shell">
+      <div class="divider reveal is-visible" aria-hidden="true"><svg class="divider__mark" viewBox="0 0 420 594"><use href="#i-lavender" width="420" height="594"></use></svg></div>
+      <p class="footer__closing reveal is-visible">دمتنّ بود، وحضوركنّ تشريف، ونسألكنّ الدعاء</p>
+    </div>
+  </footer>
+
+</main>
+
+<script>
+
+/* دعوة السيدات — envelope gate, reveals and countdown */
+const EVENT = new Date('2026-12-09T21:30:00+03:00').getTime();
+const $ = (id) => document.getElementById(id);
+const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+const arabic = new Intl.NumberFormat('ar-EG', { useGrouping: false });
+const n = (v) => arabic.format(Number(v) || 0);
+const pad2 = (v) => arabic.format(Math.floor(v)).padStart(2, '٠');
+
+function initReveals() {
+  const targets = document.querySelectorAll('.reveal');
+  if (!targets.length) return;
+  const show = (el) => el.classList.add('is-visible');
+  if (reduced.matches || !('IntersectionObserver' in window)) {
+    targets.forEach(show);
+    return;
+  }
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      show(e.target);
+      io.unobserve(e.target);
+    }
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+  targets.forEach((el) => io.observe(el));
+  setTimeout(() => targets.forEach(show), 2500);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) targets.forEach(show);
+  });
+}
+
+function initCountdown() {
+  const grid = $('countGrid');
+  const today = $('countToday');
+  const live = $('countLive');
+  if (!grid) return;
+  const cells = {};
+  for (const el of grid.querySelectorAll('[data-cd]')) cells[el.dataset.cd] = el;
+  let lastSecond = null;
+  function render() {
+    const left = EVENT - Date.now();
+    if (left <= 0) {
+      grid.hidden = true;
+      if (today) today.hidden = false;
+      return false;
+    }
+    if (today) today.hidden = true;
+    grid.hidden = false;
+    const s = Math.floor(left / 1000);
+    const days = Math.floor(s / 86400);
+    const hours = Math.floor((s % 86400) / 3600);
+    const mins = Math.floor((s % 3600) / 60);
+    const secs = s % 60;
+    if (cells.days) cells.days.textContent = n(days);
+    if (cells.hours) cells.hours.textContent = pad2(hours);
+    if (cells.minutes) cells.minutes.textContent = pad2(mins);
+    if (cells.seconds && secs !== lastSecond) {
+      cells.seconds.textContent = pad2(secs);
+      if (!reduced.matches) {
+        cells.seconds.classList.remove('is-tick');
+        void cells.seconds.offsetWidth;
+        cells.seconds.classList.add('is-tick');
+      }
+      lastSecond = secs;
+    }
+    if (live) live.textContent = `بقي ${n(days)} يوم و${n(hours)} ساعة و${n(mins)} دقيقة`;
+    return true;
+  }
+  if (!render()) return;
+  const timer = setInterval(() => { if (!render()) clearInterval(timer); }, 1000);
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) render();
+  });
+}
+
+function initGate({ onOpen } = {}) {
+  const gate = $('gate');
+  const seal = $('gateSeal');
+  if (!gate || !seal) { onOpen?.(); return; }
+  gate.hidden = false;
+  document.body.style.overflow = 'hidden';
+  document.documentElement.classList.add('is-sealed');
+  let opened = false;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  const toTop = () => window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  toTop();
+  window.addEventListener('pageshow', toTop);
+  const holdTop = () => { if (!opened) toTop(); };
+  window.addEventListener('scroll', holdTop, { passive: true });
+  const main = document.querySelector('main');
+  if (main) main.inert = true;
+  const FOLD_MS = reduced.matches ? 0 : 1800;
+  const FADE_MS = 900;
+  const finish = () => {
+    gate.hidden = true;
+    gate.classList.remove('is-opening');
+  };
+  const open = () => {
+    if (opened) return;
+    opened = true;
+    window.removeEventListener('scroll', holdTop);
+    toTop();
+    gate.classList.add('is-opening');
+    document.body.style.overflow = '';
+    document.documentElement.classList.remove('is-sealed');
+    if (main) main.inert = false;
+    setTimeout(() => {
+      onOpen?.();
+      gate.classList.add('is-open');
+      gate.addEventListener('transitionend', finish, { once: true });
+      setTimeout(finish, FADE_MS + 400);
+    }, FOLD_MS);
+  };
+  const envelope = gate.querySelector('.gate__envelope');
+  (envelope || seal).addEventListener('click', open);
+  gate.addEventListener('keydown', (e) => { if (e.key === 'Escape') open(); });
+}
+
+initCountdown();
+initGate({ onOpen: initReveals });
+
+</script>
+
+</body></html>
